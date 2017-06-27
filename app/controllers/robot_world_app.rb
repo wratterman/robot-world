@@ -21,4 +21,10 @@ class RobotWorldApp < Sinatra::Base
   get '/robots/new' do
     erb :new_robot
   end
+
+  get '/robots/:id' do
+    @robot = Robot.find(params[:id])
+    erb :show
+  end
+
 end
