@@ -17,6 +17,7 @@ class RobotWorldApp < Sinatra::Base
     robot = Robot.new(params[:robot])
     robot.save
     redirect '/robots'
+    erb :layout
   end
 
   get '/robots/new' do

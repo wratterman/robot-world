@@ -1,1 +1,24 @@
+/*IP is 100% belonging to Developer Extraordinaire Joel Lindow*/
 
+p {
+  color: red;
+}
+
+body {
+  width: 100%;
+  background-image: url('http://wallpapercave.com/wp/9o5PEub.jpg');
+  font-family: 'Avenir Next', sans-serif;
+  text-decoration: none;
+}
+
+nav {
+  background-color: lightgray;
+  overflow: hidden;
+  max-width: 99%;
+  margin-left: 5px;
+}
+
+.nav-links {
+  float: right;
+  margin-right: 10px;
+}
