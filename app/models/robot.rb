@@ -33,13 +33,13 @@ class Robot
    Robot.new(robot)
  end
 
- def self.update(id, task_params)
+ def self.update(id, robot_params)
    database = SQLite3::Database.new('db/robot_world_development.db')
    database.results_as_hash = true
    database.execute("UPDATE robots
                      SET name = ?,
-                         city = ?
-                         state = ?
+                         city = ?,
+                         state = ?,
                          department = ?
                      WHERE id = ?;",
                      robot_params[:name],
