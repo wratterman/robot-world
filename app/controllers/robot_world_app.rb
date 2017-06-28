@@ -1,4 +1,6 @@
 require_relative '../models/robot.rb'
+require_relative '../models/robot_decorator.rb'
+
 
 class RobotWorldApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
@@ -25,7 +27,8 @@ class RobotWorldApp < Sinatra::Base
   end
 
   get '/robots/:id' do
-    @robot = Robot.find(params[:id])
+    robot = Robot.find(params[:id])
+    @robot = RobotDecorator.new(robot)
     erb :show
   end
 
